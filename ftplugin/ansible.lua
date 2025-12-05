@@ -22,4 +22,7 @@ else
   vim.bo.path = table.concat(paths, ",")
 end
 
-vim.bo.suffixesadd = ".yaml,.yml,.j2,.jinja2"
+vim.bo.suffixesadd = table.concat({
+  vim.bo.suffixesadd,
+  ".yaml,.yml,.j2,.jinja2",
+}, ",")
